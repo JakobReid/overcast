@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+:root {
+    --oc-blue: #36a9e1;
+    --oc-yellow: #ffde00;
+
+}
+
+
+.banner-logo {
+    width: 15rem;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/overcast-studio-2-banner.jpg");
+
+    height: 30%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+body {
+    background-color: var(--oc-blue) !important;
+    font-family: 'Lexend', sans-serif !important;
+    max-width: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#home-nav-content {
+    justify-content: space-evenly;
+}
+
+#home-nav-content .nav-item {
+    width: 10rem;
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+}
+
+#home-nav-content .nav-item:nth-of-type(3) {
+    margin-right: 20rem;
+}
+
+
+.navbar, .navbar a {
+    color: #ffffff;
+}
+
+#about {
+    background-color: #242424;
+    color: #ffffff;
+}
+
+#gallery {
+    height: 40rem;
+    background-image: url('./assets/v1015-104a.jpg')
+}
+
+#merch {
+    background-color: var(--oc-yellow);
+}
+
+#events {
+    background-color: var(--oc-blue);
+}
+
+#contact {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #585858;
+    color: #ffffff;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    padding: 2rem;
+    min-height: 10rem;
+}
+
