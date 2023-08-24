@@ -66,6 +66,26 @@ img {
     text-align: center;
 }
 
+#watch {
+    background-color: #1c5b7b;
+    color: #ffffff;
+    height: 40rem;
+    text-align: center;
+}
+
+#watch .col {
+    height: 20rem;
+}
+
+section a {
+    color: var(--oc-yellow);
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
 #gallery {
     text-align: center;
     background-color: #1c5b7b;
@@ -101,8 +121,8 @@ section {
 }
 
 iframe {
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: 100%
 }
 
 #about img {
