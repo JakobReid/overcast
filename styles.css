@@ -17,8 +17,6 @@
 }
 
 .hero-image {
-    background-image: url("./assets/23284.png");
-
     height: 20%;
 
     background-position: center;
@@ -29,7 +27,7 @@
 
 
 body {
-    background-color: var(--oc-blue) !important;
+    background-color: #1c5b7b !important;
     font-family: 'Lexend', sans-serif !important;
     max-width: 100vw;
 }
@@ -59,7 +57,7 @@ img {
 }
 
 .navbar {
-    padding: 8rem 0 4rem 0 !important;
+    padding: 6.5rem 0 4rem 0 !important;
 }
 
 #about {
