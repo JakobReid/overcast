@@ -11,7 +11,7 @@
     width: 15rem;
 
     position: absolute;
-    top: 100%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -58,6 +58,10 @@ img {
     color: #ffffff;
 }
 
+.navbar {
+    padding: 8rem 0 4rem 0 !important;
+}
+
 #about {
     background-color: #242424;
     color: #ffffff;
@@ -65,9 +69,9 @@ img {
 }
 
 #gallery {
+    text-align: center;
+    background-color: #1c5b7b;
     height: 40rem;
-    background-image: url('./assets/v1015-104a.jpg');
-    padding: 0;
 }
 
 #merch {
@@ -99,6 +103,11 @@ section {
 }
 
 iframe {
-    width: 100%;
+    width: 60%;
     height: 100%;
+}
+
+#about img {
+    width: 50%;
+    height: auto;
 }
