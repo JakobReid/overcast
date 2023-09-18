@@ -7,30 +7,86 @@
 }
 
 
-.banner-logo {
-    width: 15rem;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.navbar-black {
+    background-color: #000000;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.hero-image {
-    height: 20%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+.navbar-toggler {
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
 }
 
+
+.navbar .navbar-brand img {
+    width: 10rem;
+}
+
+
+.navbar .navbar-brand span {
+    font-size: 2rem;
+}
+
+
+.navbar,
+.navbar a {
+    color: #ffffff;
+}
+
+.navbar {
+    padding: 2rem;
+}
+
+
+.navbar-nav {
+    margin-left: -14rem;
+}
+
+
+.offcanvas {
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.offcanvas .btn-close {
+    color: #ffffff;
+}
+
+.offcanvas .offcanvas-header .close {
+    border: none;
+    font-size: 1.75rem;
+}
+
+
+.offcanvas-body {
+    color: #ffffff;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.offcanvas-body .nav-link,
+.offcanvas-body .nav-link.active {
+    color: #ffffff;
+}
+
+.offcanvas-body .nav-link.active {
+    background-color: #000000;
+}
+
+
+header .navbar {
+    background: none;
+}
 
 body {
-    background-color: #1c5b7b !important;
+    background-color: #000000 !important;
     font-family: 'Lexend', sans-serif !important;
     max-width: 100vw;
 }
+
+main {}
 
 img {
     max-width: 100%;
@@ -52,14 +108,6 @@ img {
 }
 
 
-.navbar, .navbar a {
-    color: #ffffff;
-}
-
-.navbar {
-    padding: 6.5rem 0 4rem 0 !important;
-}
-
 #about {
     background-color: #242424;
     color: #ffffff;
@@ -68,8 +116,11 @@ img {
 
 #gallery {
     text-align: center;
-    background-color: #1c5b7b;
-    height: 40rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)), url(./assets/Copy\ of\ _FIN1837.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 #merch {
@@ -87,12 +138,10 @@ img {
 footer {
     background-color: #585858;
     color: #ffffff;
-
-    position: fixed;
-    bottom: 0;
     width: 100%;
     text-align: center;
     padding: 1rem;
+    position: relative;
 }
 
 section {
