@@ -7,6 +7,32 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .offcanvas {
+        background-image: url(./assets/23284.jpg);
+        background-size: cover;
+        background-position: center;
+        text-align: left !important;
+        font-size: 1.5rem;
+    }
+
+
+    .nav-item {
+        margin-top: 0.5rem;
+    }
+
+
+    .navbar-nav {
+        margin-left: 0 !important
+    }
+
+
+    #gallery {
+        background-position: center !important;
+    }
+}
+
+
 .navbar-black {
     background-color: #000000;
     transition: background-color 0.3s ease-in-out;
@@ -19,12 +45,20 @@
 }
 
 
-.navbar .navbar-brand img {
-    width: 10rem;
+.navbar-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
-.navbar .navbar-brand span {
+.navbar-brand img {
+    width: 15rem;
+}
+
+
+.navbar-brand span {
     font-size: 2rem;
 }
 
@@ -40,7 +74,7 @@
 
 
 .navbar-nav {
-    margin-left: -14rem;
+    margin-left: -10rem;
 }
 
 
@@ -50,8 +84,9 @@
     text-align: center;
 }
 
-.offcanvas .btn-close {
+.offcanvas button.close {
     color: #ffffff;
+    font-size: 2rem;
 }
 
 .offcanvas .offcanvas-header .close {
@@ -116,9 +151,9 @@ img {
 
 #gallery {
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)), url(./assets/Copy\ of\ _FIN1837.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center calc(50% - 15rem);
     background-repeat: no-repeat;
     min-height: 100vh;
 }
