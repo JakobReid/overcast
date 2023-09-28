@@ -28,7 +28,7 @@
 
 
     #gallery {
-        background-position: center !important;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg) !important;
     }
 }
 
@@ -40,7 +40,7 @@
 }
 
 
-.navbar-brand {
+.hero-image-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,13 +48,8 @@
 }
 
 
-.navbar-brand img {
+.hero-image-container img {
     width: 25rem;
-}
-
-
-.navbar-brand span {
-    font-size: 2rem;
 }
 
 
@@ -65,6 +60,10 @@
 
 .navbar {
     padding: 2rem;
+}
+
+.navbar-brand {
+    max-width: 5rem;
 }
 
 
@@ -160,9 +159,9 @@ img {
 
 #gallery {
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church-banner.jpg);
     background-size: cover;
-    background-position: center calc(50% - 15rem);
+    background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
 }

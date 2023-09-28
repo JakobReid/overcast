@@ -27,9 +27,9 @@
 
 <body>
     <header>
-        <a class="navbar-brand" href="../index.html">
+        <div class="hero-image-container">
             <img src="./assets/overcast_inverted.png">
-        </a>
+        </div>
 
         
         <nav class="navbar navbar-expand-xl fixed-top" id="header-nav">
@@ -38,6 +38,10 @@
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <i class="fas fa-fw fa-bars"></i>
                 </button>
+
+                <a class="navbar-brand d-none">
+                    <img src="./assets/overcast_umbrella_inverted.png" alt="Overcast Logo">
+                </a>
 
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -132,10 +136,12 @@
     $(function () {
         $(document).scroll(function () {
             let nav = $("#header-nav");
+            let navbarBrand = nav.find('.navbar-brand');
             let gallerySection = $('#gallery');
-            let scrollHeight = gallerySection.height() / 4;
+            let scrollHeight = gallerySection.height() / 2;
 
             nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
+            navbarBrand.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
         });
     });
 </script>
