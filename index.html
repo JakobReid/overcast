@@ -27,11 +27,6 @@
 
 <body>
     <header>
-        <div class="hero-image-container">
-            <img src="./assets/overcast_inverted.png">
-        </div>
-
-        
         <nav class="navbar navbar-expand-xl fixed-top" id="header-nav">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -86,8 +81,10 @@
 
 
     <main>
-        <section id="gallery">
-
+        <section id="hero">
+            <div class="hero-image-container">
+                <img src="./assets/overcast_inverted.png">
+            </div>
         </section>
 
         <section id="about">
@@ -137,8 +134,8 @@
         $(document).scroll(function () {
             let nav = $("#header-nav");
             let navbarBrand = nav.find('.navbar-brand');
-            let gallerySection = $('#gallery');
-            let scrollHeight = gallerySection.height() / 2;
+            let heroSection = $('#hero');
+            let scrollHeight = heroSection.height() / 2;
 
             nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
             navbarBrand.toggleClass('d-none', $(this).scrollTop() < scrollHeight);

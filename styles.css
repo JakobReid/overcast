@@ -27,7 +27,7 @@
     }
 
 
-    #gallery {
+    #hero {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg) !important;
     }
 }
@@ -157,7 +157,7 @@ img {
     text-align: center;
 }
 
-#gallery {
+#hero {
     text-align: center;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church-banner.jpg);
     background-size: cover;
