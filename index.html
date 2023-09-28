@@ -129,20 +129,14 @@
 
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        var gallerySection = $("#gallery");
-        var navbar = $("#header-nav");
-        var scrollPosition = gallerySection.offset().top + gallerySection.outerHeight();
+    $(function () {
+        $(document).scroll(function () {
+            let nav = $("#header-nav");
+            let gallerySection = $('#gallery');
+            let scrollHeight = gallerySection.height() / 4;
 
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= scrollPosition) {
-                navbar.addClass("navbar-black");
-            } else {
-                navbar.removeClass("navbar-black");
-            }
+            nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
         });
-
-
     });
 </script>
 

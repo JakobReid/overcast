@@ -33,11 +33,6 @@
 }
 
 
-.navbar-black {
-    background-color: #000000;
-    transition: background-color 0.3s ease-in-out;
-}
-
 .navbar-toggler {
     border: none;
     color: #ffffff;
@@ -54,7 +49,7 @@
 
 
 .navbar-brand img {
-    width: 15rem;
+    width: 25rem;
 }
 
 
@@ -75,6 +70,19 @@
 
 .navbar-nav {
     margin-left: -10rem;
+}
+
+
+.navbar-scrolled {
+    background-color: #36a9e1 !important;
+    padding: 1rem !important;
+    transition: background-color 0.3s;
+}
+
+
+.navbar-scrolled .offcanvas-body {
+    font-size: 1rem;
+    transition: font-size 0.5s;
 }
 
 
@@ -113,6 +121,7 @@
 
 header .navbar {
     background: none;
+    transition: 0.3s ease-in-out;
 }
 
 body {
@@ -151,7 +160,7 @@ img {
 
 #gallery {
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg);
     background-size: cover;
     background-position: center calc(50% - 15rem);
     background-repeat: no-repeat;
