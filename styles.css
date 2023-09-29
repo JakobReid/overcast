@@ -7,13 +7,13 @@
 }
 
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 992px) {
     .offcanvas {
         background-image: url(./assets/23284.jpg);
         background-size: cover;
         background-position: center;
         text-align: left !important;
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
     }
 
 
@@ -104,7 +104,7 @@
 
 .offcanvas-body {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem !important;
     justify-content: center;
 }
 
