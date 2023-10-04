@@ -9,11 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/e0631bf475.js" crossorigin="anonymous"></script>
@@ -31,16 +28,14 @@
             <img src="./assets/overcast_inverted.png">
         </a>
 
-        
+
         <nav class="navbar navbar-expand-xl fixed-top" id="header-nav">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <i class="fas fa-fw fa-bars"></i>
                 </button>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Navigate</h5>
                             <button type="button" class="btn close" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -87,21 +82,31 @@
         </section>
 
         <section id="watch">
-            <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=-Evx3E7TX0ckQjRt" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div>
+                <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=-Evx3E7TX0ckQjRt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-blue btn-lg">Watch More</button>
+                </div>
+            </div>
+
         </section>
 
         <section id="about">
             <h1>About Us</h1>
-            <p>Overcast was formed in 2020 by two sets of barbershopping siblings: Erin and Kate Butler, and Ryan and
+            <p>
+                Overcast is a barbershop quartet based on the Gold Coast, Australia. We first started singing together when two sets of siblings 
+
+                Overcast was formed in 2020 by two sets of barbershopping siblings: Erin and Kate Butler, and Ryan and
                 Jakob Reid. Since forming, Overcast has competed at various BHA regional competitions and recently
                 attended their first BHA national competition. Here they took out the BHA national youth mixed gold
                 medal as well as coming 5th place in the open competition. Looking towards the future, Overcast hopes to
                 sharpen their performance skills, with a dream of one day attending the international BHS varsity
-                quartet contest.</p>
-            <img src="./assets/overcast-studio-2.png">
+                quartet contest.
+            </p>
         </section>
 
         <section id="merch">
