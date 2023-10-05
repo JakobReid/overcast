@@ -22,11 +22,6 @@
     }
 
 
-    .navbar-nav {
-        margin-left: 0 !important
-    }
-
-
     #hero {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg) !important;
     }
@@ -67,11 +62,6 @@
 }
 
 
-.navbar-nav {
-    margin-left: -10rem;
-}
-
-
 .navbar-scrolled {
     background-color: #36a9e1 !important;
     padding: 1rem !important;
@@ -80,8 +70,13 @@
 
 
 .navbar-scrolled .offcanvas-body {
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: font-size 0.5s;
+}
+
+
+.navbar-scrolled .navbar-nav {
+    margin-left: -5rem;
 }
 
 
@@ -104,8 +99,9 @@
 
 .offcanvas-body {
     color: #ffffff;
-    font-size: 2rem !important;
+    font-size: 2rem;
     justify-content: center;
+    transition: font-size 0.5s;
 }
 
 .offcanvas-body .nav-link,
