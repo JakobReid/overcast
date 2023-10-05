@@ -141,6 +141,12 @@
 }
 
 
+.social-media i {
+    margin: 2rem 0.5rem;
+    font-size: 2rem;
+}
+
+
 header .navbar {
     background: none;
     transition: 0.3s ease-in-out;
