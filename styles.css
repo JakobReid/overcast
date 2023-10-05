@@ -3,17 +3,21 @@
 :root {
     --oc-blue: #36a9e1;
     --oc-yellow: #ffde00;
-
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
     .offcanvas {
         background-image: url(./assets/23284.jpg);
         background-size: cover;
         background-position: center;
         text-align: left !important;
         font-size: 1.5rem !important;
+    }
+
+
+    .navbar .container-fluid {
+        justify-content: end;
     }
 
 
@@ -57,6 +61,7 @@
     padding: 2rem;
 }
 
+
 .navbar-brand {
     max-width: 5rem;
 }
@@ -66,6 +71,11 @@
     background-color: #36a9e1 !important;
     padding: 1rem !important;
     transition: background-color 0.3s;
+}
+
+
+.navbar-scrolled .container-fluid {
+    justify-content: space-between;
 }
 
 
