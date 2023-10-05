@@ -156,33 +156,6 @@
 }
 
 
-header .navbar {
-    background: none;
-    transition: 0.3s ease-in-out;
-}
-
-body {
-    background-color: #000000 !important;
-    font-family: century-gothic, sans-serif;
-    max-width: 100vw;
-}
-
-main {}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-h1 {
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.25rem;
-}
-
 #home-nav-content {
     justify-content: space-evenly;
 }
@@ -203,6 +176,12 @@ p {
     color: var(--oc-black);
 }
 
+#about img {
+    width: 50%;
+    height: auto;
+}
+
+
 #hero {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url(./assets/overcast-church-banner.jpg);
     background-size: cover;
@@ -211,17 +190,21 @@ p {
     min-height: 100vh;
 }
 
+
 #merch {
     background-color: var(--oc-yellow);
 }
+
 
 #watch {
     background-color: #242424;
 }
 
+
 #contact {
     background-color: #ffffff;
 }
+
 
 footer {
     background-color: #585858;
@@ -232,12 +215,40 @@ footer {
     position: relative;
 }
 
+
 section {
-    padding: 5rem;
+    padding: 5rem 2rem;
     min-height: 10rem;
 }
 
-#about img {
-    width: 50%;
+
+header .navbar {
+    background: none;
+    transition: 0.3s ease-in-out;
+}
+
+
+body {
+    background-color: #000000 !important;
+    font-family: century-gothic, sans-serif;
+    max-width: 100vw;
+}
+
+
+main {}
+
+
+img {
+    max-width: 100%;
     height: auto;
+}
+
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+
+p {
+    font-size: 1.25rem;
 }
