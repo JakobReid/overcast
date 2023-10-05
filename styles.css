@@ -148,7 +148,7 @@
     color: var(--oc-white);
     font-size: 2rem;
     text-decoration: none;
-    margin: 2rem 0.5rem;
+    margin: 2rem 0;
 }
 
 .social-media-link:hover {
