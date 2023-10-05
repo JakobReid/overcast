@@ -2,7 +2,10 @@
 
 :root {
     --oc-blue: #36a9e1;
+    --oc-dark-blue: #104C6A;
     --oc-yellow: #ffde00;
+    --oc-white: #e7e7e7;
+    --oc-black: #1B1212;
 }
 
 
@@ -71,7 +74,7 @@
 
 
 .navbar-scrolled {
-    background-color: #36a9e1 !important;
+    background-color: var(--oc-dark-blue) !important;
     padding: 1rem !important;
     transition: background-color 0.3s;
     position: fixed;
@@ -133,6 +136,11 @@
 }
 
 
+.youtube-container {
+    max-width: 40rem;
+}
+
+
 header .navbar {
     background: none;
     transition: 0.3s ease-in-out;
@@ -151,6 +159,15 @@ img {
     height: auto;
 }
 
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
 #home-nav-content {
     justify-content: space-evenly;
 }
@@ -167,13 +184,11 @@ img {
 
 
 #about {
-    background-color: #242424;
-    color: #ffffff;
-    text-align: center;
+    background-color: var(--oc-white);
+    color: var(--oc-black);
 }
 
 #hero {
-    text-align: center;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url(./assets/overcast-church-banner.jpg);
     background-size: cover;
     background-position: center;
@@ -185,8 +200,8 @@ img {
     background-color: var(--oc-yellow);
 }
 
-#events {
-    background-color: var(--oc-blue);
+#watch {
+    background-color: #242424;
 }
 
 #contact {
@@ -203,13 +218,8 @@ footer {
 }
 
 section {
-    padding: 2rem;
+    padding: 5rem;
     min-height: 10rem;
-}
-
-iframe {
-    width: 60%;
-    height: 100%;
 }
 
 #about img {
