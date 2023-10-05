@@ -91,7 +91,7 @@
 
 
 .navbar-scrolled .offcanvas-body {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     transition: font-size 0.5s;
 }
 
@@ -131,8 +131,8 @@
     color: #ffffff;
 }
 
-.offcanvas-body .nav-link.active {
-    background-color: #000000;
+.offcanvas-body .nav-link:hover {
+    text-decoration: underline;
 }
 
 
@@ -140,10 +140,19 @@
     max-width: 40rem;
 }
 
+.social-media {
+    margin-bottom: 1rem;
+}
 
-.social-media i {
-    margin: 2rem 0.5rem;
+.social-media-link {
+    color: var(--oc-white);
     font-size: 2rem;
+    text-decoration: none;
+    margin: 2rem 0.5rem;
+}
+
+.social-media-link:hover {
+    color: var(--oc-blue);
 }
 
 
