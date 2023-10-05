@@ -27,7 +27,7 @@
 
 
     #hero {
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church.jpg) !important;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./assets/overcast-church.jpg) !important;
     }
 }
 
@@ -62,7 +62,7 @@
 }
 
 .navbar .navbar-nav {
-    margin-top: 45rem;
+    /* margin-top: 45rem; */
 }
 
 .navbar-brand {
@@ -174,7 +174,7 @@ img {
 
 #hero {
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95)), url(./assets/overcast-church-banner.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), url(./assets/overcast-church-banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
