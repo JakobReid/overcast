@@ -32,6 +32,12 @@
 }
 
 
+::selection {
+    background-color: var(--oc-blue); 
+    color: var(--oc-white);
+}
+
+
 .row {
     display: flex;
     justify-content: center;
@@ -60,6 +66,32 @@
     color: var(--oc-white);
     background-color: var(--oc-blue);
 }
+
+.btn-overcast-yellow {
+    color: var(--oc-white);
+    background-color: #c9b325;
+}
+
+.btn-overcast-yellow:hover {
+    color: var(--oc-white);
+    background-color: #b6a015;
+}
+
+.btn-overcast-yellow:active {
+    color: var(--oc-white);
+    background-color: #b6a015 !important;
+}
+
+.btn-overcast-yellow:focus {
+    color: var(--oc-white);
+    background-color: #b6a015;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 .navbar-toggler {
     border: none;
@@ -186,13 +218,6 @@
 }
 
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    max-width: 50rem;
-}
-
-
 #about {
     background-color: var(--oc-white);
     color: var(--oc-black);
@@ -206,8 +231,8 @@
 
 #hero {
     position: relative;
-    background-image: linear-gradient(to top, rgba(49, 125, 163, 0.5), rgba(54, 144, 205, 0.5)), /* New circular gradient overlay */
-                      url(./assets/overcast-church.jpg); /* Background image */
+    background-image: linear-gradient(to top, rgba(49, 125, 163, 0.5), rgba(54, 144, 205, 0.5)),
+                      url(./assets/overcast-church.jpg); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -236,9 +261,20 @@
 
 
 #contact {
-    background-image: url(./assets/panoramic-blue-sky-and-white-cloud-with-sunshine-free-vector.jpg);
-    background-size: cover;
-    background-position: center;
+    color: var(--oc-white);
+    background-color: #2e9bd1;
+}
+
+#contact a {
+    color: var(--oc-yellow);
+}
+
+#contact-form input, #contact-form select, #contact-form textarea {
+    background: transparent;
+    border: solid 0.125rem var(--oc-white);
+    border-radius: 0.5rem;
+    color: var(--oc-white);
+    caret-color: var(--oc-white);
 }
 
 
@@ -253,7 +289,7 @@ footer {
 
 
 section {
-    padding: 5rem 2rem;
+    padding: 7rem 15rem;
     min-height: 10rem;
 }
 
