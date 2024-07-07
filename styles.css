@@ -110,7 +110,7 @@
 }
 
 
-.navbar-scrolled .offcanvas-body {
+.navbar-scrolled .offcanvas .offcanvas-body {
     font-size: 1.25rem;
     transition: font-size 0.5s;
 }
@@ -136,32 +136,36 @@
 
 .offcanvas button.close {
     color: #ffffff;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .offcanvas .offcanvas-header .close {
     border: none;
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 
-.offcanvas-header {
+.offcanvas .offcanvas-header {
     background-color: var(--oc-dark-blue);
 }
 
-.offcanvas-body {
-    background-color: var(--oc-dark-blue);
+.offcanvas .offcanvas-body {
+    background-color: transparent;
     color: #ffffff;
     font-size: 2rem;
     justify-content: center;
     transition: font-size 0.5s;
 }
 
-.offcanvas-body .nav-link,
-.offcanvas-body .nav-link.active {
+.offcanvas.shown .offcanvas-body {
+    background-color: var(--oc-dark-blue);
+}
+
+.offcanvas .offcanvas-body .nav-link,
+.offcanvas .offcanvas-body .nav-link.active {
     color: #ffffff;
 }
 
-.offcanvas-body .nav-link:hover {
+.offcanvas .offcanvas-body .nav-link:hover {
     text-decoration: underline;
 }
 
