@@ -17,6 +17,50 @@
 }
 
 
+@keyframes shake-grow {
+    0% { transform: scale(1.2) translate(0, 0); }
+    10% { transform: scale(1.2) translate(-4px, 4px); }
+    20% { transform: scale(1.2) translate(4px, -4px); }
+    30% { transform: scale(1.2) translate(-4px, 4px); }
+    40% { transform: scale(1.2) translate(4px, -4px); }
+    50% { transform: scale(1.2) translate(-4px, 4px); }
+    60% { transform: scale(1.2) translate(4px, -4px); }
+    70% { transform: scale(1.2) translate(-4px, 4px); }
+    80% { transform: scale(1.2) translate(4px, -4px); }
+    90% { transform: scale(1.2) translate(-4px, 4px); }
+    100% { transform: scale(1.2) translate(0, 0); }
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.btn {
+    width: auto;
+}
+
+.btn-youtube-red {
+    color: var(--oc-white);
+    background-color: #ff0000;
+    border: solid 0.125rem #ff0000;
+}
+
+.btn-youtube-red:hover {
+    color: var(--oc-white);
+    background-color: #be0000;
+    border: solid 0.125rem #be0000;
+    animation: shake-grow 0.5s ease-in-out infinite;
+}
+
+.btn-overcast-blue {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
 .navbar-toggler {
     border: none;
     color: #ffffff;
@@ -162,7 +206,7 @@
 
 #hero {
     position: relative;
-    background-image: radial-gradient(circle, rgba(49, 125, 163, 0.25), rgba(54, 144, 205, 0.25)), /* New circular gradient overlay */
+    background-image: linear-gradient(to top, rgba(49, 125, 163, 0.5), rgba(54, 144, 205, 0.5)), /* New circular gradient overlay */
                       url(./assets/overcast-church.jpg); /* Background image */
     background-size: cover;
     background-position: center;
@@ -179,6 +223,15 @@
 #watch {
     background-color: #242424;
     color: var(--oc-white);
+}
+
+#youtube-channel {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#youtube-channel .btn-youtube-red {
+    margin-top: 1rem;
 }
 
 
