@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-xl fixed-top" id="header-nav">
+        <nav class="navbar navbar-expand-xs fixed-top" id="header-nav">
             <div class="container-fluid">
                 <a class="navbar-brand d-none" href="#">
                     <img src="./assets/overcast_umbrella_inverted.png" alt="Overcast Logo">
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav d-none">
                             <li class="nav-item">
                                 <a class="nav-link" href="#about">ABOUT</a>
                             </li>
@@ -71,6 +71,7 @@
         </section>
 
 
+
         <section id="about">
             <div class="container">
                 <h1>About Us</h1>
@@ -86,28 +87,85 @@
         </section>
 
 
+
         <section id="watch">
-            <div class="row">
-                <div class="col d-flex justify-content-center">
-                    <div class="youtube-container ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/wrHxrbphW8g?si=pQztcn6T3Ymr9fWP&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </iframe>
-                    </div>
-                </div>
+            <div class="container">
+                <h1>Overcast In Action</h1>
 
-                <div class="col d-flex justify-content-center">
-                    <div class="youtube-container ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=TroXkv-h4lN8GmEd&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
+                <hr>
 
-                <div class="col d-flex justify-content-center">
-                    <div class="youtube-container ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/nNjnCZrDkO8?si=B7RACeauCZyAkBsU&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <div class="youtube-container ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/wrHxrbphW8g?si=pQztcn6T3Ymr9fWP&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="youtube-container ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=TroXkv-h4lN8GmEd&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col d-flex justify-content-center">
+                        <div class="youtube-container ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/nNjnCZrDkO8?si=B7RACeauCZyAkBsU&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+        <!-- <section id="contact">
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="first_name">
+                        </div>
+    
+                        <div class="col">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="last_name">
+                        </div>
+                    </div>
+    
+    
+                    <div class="row">
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" required>
+                        </div>
+    
+    
+                    <div class="row">
+                        <div class="col">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                    </div>
+    
+    
+                    <div class="row">
+                        <div class="col">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" required></textarea>
+                        </div>
+                    </div>
+    
+    
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section> -->
     </main>
 
 
@@ -144,14 +202,25 @@
 
 <script type="text/javascript">
     $(function () {
-        $(document).scroll(function () {
-            let nav = $("#header-nav");
-            let navbarBrand = nav.find('.navbar-brand');
-            let heroSection = $('#hero');
-            let scrollHeight = heroSection.height() / 2;
+        const nav = $("#header-nav");
+        const navbarToggler = nav.find('.navbar-toggler');
+        const navbarBrand = nav.find('.navbar-brand');
+        const navbarNav = nav.find('.navbar-nav');
 
-            nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
+        // change colour on scroll
+        $(document).scroll(function () {
+            const heroSection = $('#hero');
+            const scrollHeight = heroSection.height() / 2;
+
             navbarBrand.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
+            navbarNav.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
+            nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
+        });
+
+
+        // handle navbar toggle
+        navbarToggler.on('click', function () {
+            navbarNav.toggleClass('d-none');
         });
     });
 </script>
