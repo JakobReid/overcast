@@ -24,41 +24,39 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-xs fixed-top" id="header-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand d-none" href="#">
-                    <img src="./assets/overcast_umbrella_inverted.png" alt="Overcast Logo">
-                </a>
+        <nav class="navbar navbar-expand-lg fixed-top" id="header-nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fas fa-fw fa-bars"></i>
+            </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <i class="fas fa-fw fa-bars"></i>
-                </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Navigate</h5>
+                        <button type="button" class="btn close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fas fa-fw fa-xmark"></i>
+                        </button>
+                </div>
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Navigate</h5>
-                            <button type="button" class="btn close" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <i class="fas fa-fw fa-xmark"></i>
-                            </button>
-                    </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">ABOUT</a>
+                        </li>
 
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav d-none">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">ABOUT</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#watch">WATCH</a>
+                        </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="#watch">WATCH</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">CONTACT</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+            <a class="navbar-brand d-none" href="#">
+                <img src="./assets/overcast_umbrella_inverted.png" alt="Overcast Logo">
+            </a>
         </nav>
     </header>
 
@@ -96,12 +94,18 @@
                 <div class="row">
                     <div class="col-lg d-flex justify-content-center">
                         <div class="youtube-container ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/wrHxrbphW8g?si=pQztcn6T3Ymr9fWP&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </iframe>
+                            <iframe src="https://www.youtube.com/embed/QUPLjHHyJcc?si=fg3rb3lNK-yqOj7P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
 
-                    <div class="col-lg d-flex justify-content-center">
+                    <!-- <div class="col-lg d-flex justify-content-center">
+                        <div class="youtube-container ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/wrHxrbphW8g?si=pQztcn6T3Ymr9fWP&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </iframe>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="col-lg d-flex justify-content-center">
                         <div class="youtube-container ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=TroXkv-h4lN8GmEd&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
@@ -111,7 +115,7 @@
                         <div class="youtube-container ratio ratio-16x9">
                             <iframe src="https://www.youtube.com/embed/nNjnCZrDkO8?si=B7RACeauCZyAkBsU&amp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -189,7 +193,7 @@
 
         <div class="row my-2">
             <div class="col">
-                <span>&#169; Overcast Quartet 2023</span>
+                <span>&#169; Overcast Quartet 2024</span>
             </div>
         </div>
     </footer>
@@ -202,9 +206,10 @@
 <script type="text/javascript">
     $(function () {
         const nav = $("#header-nav");
-        const navbarToggler = nav.find('.navbar-toggler');
         const navbarBrand = nav.find('.navbar-brand');
         const navbarNav = nav.find('.navbar-nav');
+
+        const offCanvas = nav.find('.offcanvas');
 
         // change colour on scroll
         $(document).scroll(function () {
@@ -218,8 +223,14 @@
 
 
         // handle navbar toggle
-        navbarToggler.on('click', function () {
-            navbarNav.toggleClass('d-none');
+        offCanvas.on('show.bs.offcanvas', function () {
+            navbarNav.removeClass('d-none');
+            nav.removeClass('navbar-scrolled');
+        });
+
+        offCanvas.on('hide.bs.offcanvas', function() {
+            nav.addClass('navbar-scrolled');
+            navbarNav.addClass('d-none');
         });
     });
 </script>
