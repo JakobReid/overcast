@@ -8,90 +8,232 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- styles and favion -->
-    <link rel="icon" href="./assets/overcast.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e0631bf475.js" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <link rel="icon" href="./assets/cloud-computing.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <div class="hero-image">
-            <div class="banner-logo-container">
-                <a href="#">
-                    <img class="banner-logo" src="./assets/overcast-sticker.png" alt="Overcast Logo">
-                </a>
+        <nav class="navbar navbar-expand-lg fixed-top" id="header-nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fas fa-fw fa-bars"></i>
+            </button>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Navigate</h1>
+                    <button type="button" class="btn close" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <i class="fas fa-fw fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#watch">Watch</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#home-nav-content" aria-controls="home-nav-content" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="home-nav-content">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#gallery">GALLERY</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#events">EVENTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#merch">MERCH</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">CONTACT US</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#another">ANOTHER</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+            <a class="navbar-brand d-none" href="#">
+                <img src="./assets/overcast_umbrella_inverted.png" alt="Overcast Logo">
+            </a>
+        </nav>
     </header>
 
 
     <main>
-        <section id="gallery">
-            <iframe src="https://www.youtube.com/embed/TfgipfG7g3s?si=-Evx3E7TX0ckQjRt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section id="hero">
+            <div class="hero-image-container">
+                <img src="./assets/overcast_inverted.png">
+            </div>
         </section>
+
+
 
         <section id="about">
-            <h1>About Us</h1>
-            <p>Overcast was formed in 2020 by two sets of barbershopping siblings: Erin and Kate Butler, and Ryan and Jakob Reid. Since forming, Overcast has competed at various BHA regional competitions and recently attended their first BHA national competition. Here they took out the BHA national youth mixed gold medal as well as coming 5th place in the open competition. Looking towards the future, Overcast hopes to sharpen their performance skills, with a dream of one day attending the international BHS varsity quartet contest.</p>
-            <img src="./assets/overcast-studio-2.png">
+            <div class="container">
+                <h1>About Us</h1>
+
+                <p>
+                    Overcast is an Australian mixed barbershop quartet, formed in 2020 by two sets of siblings that shared a love for barbershop singing and an equal terror of performing in front of an audience.
+                </p>
+                <p>
+                    Looking to the future, we want to continue improving our singing and performing skills to hopefully one day share our music on the international BHS stage!
+                </p>
+            </div>
         </section>
 
-        <section id="events">
-            Events section
+
+
+        <section id="watch">
+            <div class="container">
+                <h1>Overcast In Action</h1>
+                <p>Barbershop? It's probably easier to show you...</p>
+
+                <div class="row">
+                    <div class="col-lg d-flex justify-content-center">
+                        <div class="youtube-container ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/QUPLjHHyJcc?si=fg3rb3lNK-yqOj7P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="youtube-channel">
+                    <h3>Head to our YouTube channel to see more</h3>
+
+                    <a class="btn btn-lg btn-youtube-red" id="youtube-button" href="https://youtube.com/@overcastquartet?si=qMOFUn9bLTfL72Fj" target="_blank">
+                        <i class="fa fa-fw fa-youtube"></i>
+                        MORE BBSHOP!!
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <section id="merch">
-            Merch section
-        </section>
+
 
         <section id="contact">
-            Contact section
+            <div class="container">
+                <div class="row">
+                    <h1>Contact Us</h1>
+                    <p>Want to get in touch? The best place to catch us is on <strong><a href="https://www.facebook.com/profile.php?id=100088900054040">Facebook.</a></strong></p>
+                    <p>You can also drop your message below and we'll get back to you!</p>
+                </div>
+
+                <div class="row form-container">
+                    <form id="contact-form">
+                        <div class="row">
+                            <div class="col-lg">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first-name" name="first_name" required>
+                            </div>
+
+                            <div class="col-lg">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" name="last_name" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-overcast-yellow btn-lg">
+                                    <i class="fa fa-fw fa-paper-plane"></i>
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
         </section>
 
-        <section id="contact">
-            Another section
-        </section>
     </main>
 
 
     <footer>
-        &#169; Copyright Overcast Quartet 2023
+        <div class="row">
+            <div class="col">
+                <span class="social-media">
+                    <a class="social-media-link" href="https://www.facebook.com/profile.php?id=100088900054040" target="_blank">
+                        <i class="fa-fw fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a class="social-media-link" href="https://www.youtube.com/@OvercastQuartet" target="_blank">
+                        <i class="fa-fw fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a class="social-media-link" href="mailto:jakob.reid@live.com">
+                        <i class="fa-fw fa-solid fa-envelope"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col">
+                <span>&#169; Overcast Quartet 2024</span>
+            </div>
+        </div>
     </footer>
 </body>
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        const nav = $("#header-nav");
+        const navbarBrand = nav.find('.navbar-brand');
+        const navbarNav = nav.find('.navbar-nav');
+
+        const offCanvas = nav.find('.offcanvas');
+
+        // change colour on scroll
+        $(document).scroll(function () {
+            const heroSection = $('#hero');
+            const scrollHeight = heroSection.height() / 2;
+
+            nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
+            navbarBrand.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
+            navbarNav.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
+        });
+
+
+        // handle navbar toggle
+        offCanvas.on('show.bs.offcanvas', function () {
+            const delayMs = 0;
+
+            setTimeout(function () {
+                navbarNav.removeClass('d-none');
+                nav.removeClass('navbar-scrolled');
+                offCanvas.addClass('shown');
+            }, 0);
+        });
+
+        offCanvas.on('hide.bs.offcanvas', function () {
+            const delayMs = 300;
+
+            setTimeout(function () {
+                nav.addClass('navbar-scrolled');
+                navbarNav.addClass('d-none');
+                offCanvas.removeClass('shown');
+            }, delayMs);
+        });
+    });
+</script>
+
 
 </html>

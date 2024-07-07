@@ -1,111 +1,327 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 :root {
     --oc-blue: #36a9e1;
+    --oc-dark-blue: #104C6A;
     --oc-yellow: #ffde00;
-
+    --oc-white: #e7e7e7;
+    --oc-black: #1B1212;
 }
 
 
-.banner-logo {
-    width: 15rem;
+@media only screen and (max-width: 992px) {
+    .col-lg {
+        margin-top: 1rem !important;
+    }
+}
 
+
+@keyframes shake-grow {
+    0% { transform: scale(1.2) translate(0, 0); }
+    10% { transform: scale(1.2) translate(-4px, 4px); }
+    20% { transform: scale(1.2) translate(4px, -4px); }
+    30% { transform: scale(1.2) translate(-4px, 4px); }
+    40% { transform: scale(1.2) translate(4px, -4px); }
+    50% { transform: scale(1.2) translate(-4px, 4px); }
+    60% { transform: scale(1.2) translate(4px, -4px); }
+    70% { transform: scale(1.2) translate(-4px, 4px); }
+    80% { transform: scale(1.2) translate(4px, -4px); }
+    90% { transform: scale(1.2) translate(-4px, 4px); }
+    100% { transform: scale(1.2) translate(0, 0); }
+}
+
+
+::selection {
+    background-color: var(--oc-blue); 
+    color: var(--oc-white);
+}
+
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.btn {
+    width: auto;
+}
+
+.btn-youtube-red {
+    color: var(--oc-white);
+    background-color: #ff0000;
+    border: solid 0.125rem #ff0000;
+}
+
+.btn-youtube-red:hover {
+    color: var(--oc-white);
+    background-color: #be0000;
+    border: solid 0.125rem #be0000;
+    animation: shake-grow 0.5s ease-in-out infinite;
+}
+
+.btn-overcast-blue {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
+.btn-overcast-yellow {
+    color: var(--oc-white);
+    background-color: #c9b325;
+}
+
+.btn-overcast-yellow:hover {
+    color: var(--oc-white);
+    background-color: #b6a015;
+}
+
+.btn-overcast-yellow:active {
+    color: var(--oc-white);
+    background-color: #b6a015 !important;
+}
+
+.btn-overcast-yellow:focus {
+    color: var(--oc-white);
+    background-color: #b6a015;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar-toggler {
+    border: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+
+.hero-image-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.hero-image {
-    height: 20%;
 
+.hero-image-container img {
+    width: 25rem;
+}
+
+
+.navbar,
+.navbar .nav-link,
+.nav-bar a {
+    color: #ffffff;
+}
+
+.navbar {
+    padding: 2rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    max-width: 6rem;
+}
+
+
+.navbar-scrolled {
+    background-color: var(--oc-dark-blue) !important;
+    padding: 1rem !important;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+
+.navbar-scrolled .offcanvas .offcanvas-body {
+    font-size: 1.25rem;
+    transition: font-size 0.5s;
+}
+
+
+.navbar-scrolled .navbar-nav {
+    margin-left: -5rem;
+    margin-top: 0;
+}
+
+.navbar {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+.offcanvas {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: left;
+}
+
+.offcanvas button.close {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.offcanvas .offcanvas-header .close {
+    border: none;
+    font-size: 2.5rem;
+}
+
+.offcanvas .offcanvas-header {
+    background-color: var(--oc-dark-blue);
+}
+
+.offcanvas .offcanvas-body {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 2rem;
+    justify-content: center;
+    transition: font-size 0.5s;
+}
+
+.offcanvas.shown .offcanvas-body {
+    background-color: var(--oc-dark-blue);
+}
+
+.offcanvas .offcanvas-body .nav-link,
+.offcanvas .offcanvas-body .nav-link.active {
+    color: #ffffff;
+}
+
+.offcanvas .offcanvas-body .nav-link:hover {
+    text-decoration: underline;
+}
+
+
+.social-media {
+    margin-bottom: 1rem;
+}
+
+.social-media-link {
+    color: var(--oc-white);
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 2rem 0;
+}
+
+.social-media-link:hover {
+    color: var(--oc-blue);
+}
+
+
+#about {
+    background-color: var(--oc-white);
+    color: var(--oc-black);
+}
+
+#about img {
+    width: 50%;
+    height: auto;
+}
+
+
+#hero {
+    position: relative;
+    background-image: linear-gradient(to top, rgba(49, 125, 163, 0.5), rgba(54, 144, 205, 0.5)),
+                      url(./assets/overcast-church.jpg); 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 100vh;
+}
+
+
+#merch {
+    background-color: var(--oc-yellow);
+}
+
+
+#watch {
+    background-color: #242424;
+    color: var(--oc-white);
+}
+
+#youtube-channel {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#youtube-channel .btn-youtube-red {
+    margin-top: 1rem;
+}
+
+
+#contact {
+    color: var(--oc-white);
+    background-color: #2e9bd1;
+}
+
+#contact a {
+    color: var(--oc-yellow);
+}
+
+#contact-form input, #contact-form select, #contact-form textarea {
+    background: transparent;
+    border: solid 0.125rem var(--oc-white);
+    border-radius: 0.5rem;
+    color: var(--oc-white);
+    caret-color: var(--oc-white);
+}
+
+
+footer {
+    background-color: #585858;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
     position: relative;
 }
 
 
+section {
+    padding: 7rem 15rem;
+    min-height: 10rem;
+}
+
+
+header .navbar {
+    background: none;
+    transition: 0.3s ease-in-out;
+}
+
+
 body {
-    background-color: #1c5b7b !important;
-    font-family: 'Lexend', sans-serif !important;
+    background-color: #000000 !important;
+    font-family: 'Lexend';
     max-width: 100vw;
 }
+
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-#home-nav-content {
-    justify-content: space-evenly;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Madimi One';
+    font-weight: bold;
 }
 
-#home-nav-content .nav-item {
-    width: 10rem;
-    text-align: center;
-    padding: 0 1rem 0 1rem;
-}
-
-#home-nav-content .nav-item:nth-of-type(3) {
-    margin-right: 20rem;
+h1 {
+    margin-bottom: 1rem;
 }
 
 
-.navbar, .navbar a {
-    color: #ffffff;
-}
-
-.navbar {
-    padding: 6.5rem 0 4rem 0 !important;
-}
-
-#about {
-    background-color: #242424;
-    color: #ffffff;
-    text-align: center;
-}
-
-#gallery {
-    text-align: center;
-    background-color: #1c5b7b;
-    height: 40rem;
-}
-
-#merch {
-    background-color: var(--oc-yellow);
-}
-
-#events {
-    background-color: var(--oc-blue);
-}
-
-#contact {
-    background-color: #ffffff;
-}
-
-footer {
-    background-color: #585858;
-    color: #ffffff;
-
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-}
-
-section {
-    padding: 2rem;
-    min-height: 10rem;
-}
-
-iframe {
-    width: 60%;
-    height: 100%;
-}
-
-#about img {
-    width: 50%;
-    height: auto;
+p {
+    font-size: 1.25rem;
 }
