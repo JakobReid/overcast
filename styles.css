@@ -272,6 +272,11 @@
     color: var(--oc-black);
 }
 
+#watch .youtube-container iframe {
+    border: solid 1rem var(--oc-white);
+    border-radius: 1rem;
+}
+
 #youtube-channel {
     text-align: center;
     margin-top: 3rem;
