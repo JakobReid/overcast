@@ -273,7 +273,6 @@
 }
 
 #watch .youtube-container iframe {
-    border: solid 1rem var(--oc-white);
     border-radius: 1rem;
 }
 
