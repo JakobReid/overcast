@@ -140,6 +140,10 @@
     padding: 2rem;
 }
 
+.navbar .nav-item {
+    font-family: 'Madimi One';
+}
+
 .navbar-brand {
     display: flex;
     align-items: center;
