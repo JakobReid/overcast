@@ -28,6 +28,14 @@
     }
 }
 
+@media only screen and (min-width: 1400px) {
+    #hero {
+        background-image: linear-gradient(to top, rgba(49, 125, 163, 0.5), rgba(54, 144, 205, 0.5)),
+        url(./assets/overcast-church-banner.jpg) !important; 
+    }
+}
+
+
 
 @keyframes shake-grow {
     0% { transform: scale(1.2) translate(0, 0); }
