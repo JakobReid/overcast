@@ -204,7 +204,7 @@
         const navbarNav = nav.find('.navbar-nav');
 
         const offCanvas = nav.find('.offcanvas');
-        const navLinkClick = false;
+        const navbarHeight = nav.outerHeight();
 
         // change colour on scroll
         $(document).scroll(function () {
@@ -246,10 +246,21 @@
         });
 
 
-        // hide off canvas
+        // offcanvas navigation
         offCanvas.on('click', '.nav-link', function (e) {
+            e.preventDefault();
+            const targetId = $(this).attr('href');
+            const targetPosition = $(targetId).offset().top - navbarHeight;
+
             const offcanvasElement = document.getElementById('offcanvas-navbar');
             const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+            // scroll to the target position
+            $('html, body').animate({
+                scrollTop: targetPosition
+            }, 200);
+
+            // hide offcanvas
             offcanvasInstance.hide();
         });
     });
