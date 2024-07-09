@@ -267,6 +267,11 @@
     color: var(--oc-white);
 }
 
+#watch ::selection {
+    background-color: var(--oc-yellow); 
+    color: var(--oc-black);
+}
+
 #youtube-channel {
     text-align: center;
     margin-top: 3rem;
@@ -284,6 +289,11 @@
 
 #contact a {
     color: var(--oc-yellow);
+}
+
+#contact ::selection {
+    background-color: var(--oc-dark-blue); 
+    color: var(--oc-white);
 }
 
 #contact-form input, #contact-form select, #contact-form textarea {
