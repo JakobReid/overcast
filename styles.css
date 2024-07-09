@@ -189,8 +189,6 @@
 
 
 .offcanvas {
-    background-size: cover;
-    background-position: center;
     color: #ffffff;
     text-align: left;
 }
@@ -205,16 +203,16 @@
     background-color: var(--oc-dark-blue);
 }
 
+.offcanvas.shown .offcanvas-body {
+    background-color: var(--oc-dark-blue);
+}
+
 .offcanvas .offcanvas-body {
     background-color: transparent;
     color: #ffffff;
     font-size: 2rem;
     justify-content: center;
     transition: font-size 0.5s;
-}
-
-.offcanvas.shown .offcanvas-body {
-    background-color: var(--oc-dark-blue);
 }
 
 .offcanvas .offcanvas-body .nav-link,
