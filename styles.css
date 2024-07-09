@@ -14,6 +14,18 @@
     .col-lg {
         margin-top: 1rem !important;
     }
+
+    .navbar-brand {
+        max-width: 5rem !important;
+    }
+
+    .navbar-toggler {
+        font-size: 2rem !important;
+    }
+
+    .offcanvas .offcanvas-header .close {
+        font-size: 2rem !important;
+    }
 }
 
 
@@ -68,7 +80,7 @@
 }
 
 .btn-overcast-yellow {
-    color: #fff;
+    color: #ffffff;
     background-color: var(--oc-yellow);
 }
 
@@ -166,13 +178,9 @@
     text-align: left;
 }
 
-.offcanvas button.close {
-    color: #ffffff;
-    font-size: 2.5rem;
-}
-
 .offcanvas .offcanvas-header .close {
     border: none;
+    color: #ffffff;
     font-size: 2.5rem;
 }
 
