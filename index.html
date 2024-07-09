@@ -25,13 +25,13 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" id="header-nav">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar" aria-label="Toggle navigation">
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-navbar" aria-labelledby="offcanvas-navbar-label">
                 <div class="offcanvas-header">
-                    <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Navigate</h1>
+                    <h1 class="offcanvas-title" id="offcanvas-navbar-label">Navigate</h1>
                     <button type="button" class="btn close" data-bs-dismiss="offcanvas" aria-label="Close">
                         <i class="fas fa-fw fa-xmark"></i>
                     </button>
@@ -75,7 +75,7 @@
                 <h1>About Us</h1>
 
                 <p>
-                    Overcast is an Australian mixed barbershop quartet, formed in 2021 by two sets of siblings that shared a love for barbershop singing.
+                    Overcast is an Australian mixed barbershop quartet, formed in 202 by two sets of siblings that shared a love for barbershop singing.
                 </p>
                 <p>
                     Looking to the future, we want to continue improving our singing and performing skills to hopefully one day share our music on the international BHS stage!
@@ -204,15 +204,23 @@
         const navbarNav = nav.find('.navbar-nav');
 
         const offCanvas = nav.find('.offcanvas');
+        const navLinkClick = false;
 
         // change colour on scroll
         $(document).scroll(function () {
             const heroSection = $('#hero');
             const scrollHeight = heroSection.height() / 2;
 
-            nav.toggleClass('navbar-scrolled', $(this).scrollTop() > scrollHeight);
-            navbarBrand.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
-            navbarNav.toggleClass('d-none', $(this).scrollTop() < scrollHeight);
+            if ($(this).scrollTop() > scrollHeight) {
+                nav.addClass('navbar-scrolled');
+                navbarBrand.removeClass('d-none');
+                navbarNav.removeClass('d-none');
+            }
+            else {
+                nav.removeClass('navbar-scrolled');
+                navbarBrand.addClass('d-none');
+                navbarNav.addClass('d-none');
+            }
         });
 
 
@@ -235,6 +243,14 @@
                 navbarNav.addClass('d-none');
                 offCanvas.removeClass('shown');
             }, delayMs);
+        });
+
+
+        // hide off canvas
+        offCanvas.on('click', '.nav-link', function (e) {
+            const offcanvasElement = document.getElementById('offcanvas-navbar');
+            const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+            offcanvasInstance.hide();
         });
     });
 </script>
