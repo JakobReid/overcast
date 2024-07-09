@@ -75,7 +75,7 @@
                 <h1>About Us</h1>
 
                 <p>
-                    Overcast is an Australian mixed barbershop quartet, formed in 2020 by two sets of siblings that shared a love for barbershop singing and an equal terror of performing in front of an audience.
+                    Overcast is an Australian mixed barbershop quartet, formed in 2020 by two sets of siblings that shared a love for barbershop singing.
                 </p>
                 <p>
                     Looking to the future, we want to continue improving our singing and performing skills to hopefully one day share our music on the international BHS stage!
@@ -183,7 +183,7 @@
 
         <div class="row my-2">
             <div class="col">
-                <span>&#169; Overcast Quartet 2024</span>
+                <span>&#169; Jakob Reid <span class="current-year"></span></span>
             </div>
         </div>
     </footer>
@@ -195,6 +195,10 @@
 
 <script type="text/javascript">
     $(function () {
+        // get copyright year
+        const currentYear = new Date().getFullYear();
+        $('.current-year').text(currentYear);
+
         const nav = $("#header-nav");
         const navbarBrand = nav.find('.navbar-brand');
         const navbarNav = nav.find('.navbar-nav');
