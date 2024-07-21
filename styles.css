@@ -278,6 +278,10 @@
     color: var(--oc-black);
 }
 
+#watch .youtube-container {
+    max-width: 60rem;
+}
+
 #watch .youtube-container iframe {
     border-radius: 1rem;
 }
