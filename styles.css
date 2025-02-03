@@ -7,6 +7,8 @@
     --oc-yellow: #ffde00;
     --oc-white: #e7e7e7;
     --oc-black: #1B1212;
+    --bbshop-blue: #1d4381;
+    --bbshop-red: #bf1e2e;
 }
 
 
@@ -92,9 +94,44 @@
     animation: shake-grow 0.5s ease-in-out infinite;
 }
 
-.btn-overcast-blue {
+.btn-bbshop-blue {
     color: var(--oc-white);
-    background-color: var(--oc-blue);
+    background-color: var(--bbshop-blue);
+}
+
+.btn-bbshop-blue:hover {
+    color: var(--oc-white);
+    background-color: color-mix(in srgb, var(--bbshop-blue) 80%, black);
+}
+
+.btn-bbshop-blue:active {
+    color: var(--oc-white);
+    background-color: var(--bbshop-blue) !important;
+}
+
+.btn-bbshop-blue:focus {
+    color: var(--oc-white);
+    background-color: var(--bbshop-blue);
+}
+
+.btn-overcast-dark-blue {
+    color: #ffffff;
+    background-color: var(--oc-dark-blue);
+}
+
+.btn-overcast-dark-blue:hover {
+    color: var(--oc-white);
+    background-color: color-mix(in srgb, var(--oc-dark-blue) 80%, black);
+}
+
+.btn-overcast-dark-blue:active {
+    color: var(--oc-white);
+    background-color: var(--oc-dark-blue) !important;
+}
+
+.btn-overcast-dark-blue:focus {
+    color: var(--oc-white);
+    background-color: var(--oc-dark-blue);
 }
 
 .btn-overcast-yellow {
@@ -238,6 +275,24 @@
 
 .social-media-link:hover {
     color: var(--oc-blue);
+}
+
+
+#bhs-2025 {
+    background: repeating-linear-gradient(
+        45deg, 
+        var(--bbshop-red) 0%, var(--bbshop-red) 10%, 
+        var(--oc-white) 10%, var(--oc-white) 20%, 
+        var(--bbshop-blue) 20%, var(--bbshop-blue) 30%
+    );
+    color: var(--oc-black);
+}
+
+#bhs-2025 .container {
+    background-color: var(--oc-white);
+    border: solid 0.5rem var(--oc-black);
+    padding: 2.5rem;
+    border-radius: 1rem;
 }
 
 
