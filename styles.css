@@ -313,8 +313,8 @@
 
 
 #watch {
-    background-color: #242424;
-    color: var(--oc-white);
+    background-color: var(--oc-white);
+    color: var(--oc-black);
 }
 
 #watch ::selection {
