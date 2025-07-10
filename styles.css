@@ -114,6 +114,26 @@
     background-color: var(--bbshop-blue);
 }
 
+.btn-overcast-blue {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
+.btn-overcast-blue:hover {
+    color: var(--oc-white);
+    background-color: color-mix(in srgb, var(--oc-blue) 80%, black);
+}
+
+.btn-overcast-blue:active {
+    color: var(--oc-white);
+    background-color: var(--oc-blue) !important;
+}
+
+.btn-overcast-blue:focus {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
 .btn-overcast-dark-blue {
     color: #ffffff;
     background-color: var(--oc-dark-blue);
@@ -198,7 +218,7 @@
 
 .navbar-scrolled {
     background-color: var(--oc-blue) !important;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     transition: background-color 0.3s;
     position: fixed;
     top: 0;
@@ -342,7 +362,7 @@
 
 #contact {
     color: var(--oc-white);
-    background-color: #2e9bd1;
+    background-color: var(--oc-dark-blue);
 }
 
 #contact a {
