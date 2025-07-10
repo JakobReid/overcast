@@ -197,7 +197,7 @@
 
 
 .navbar-scrolled {
-    background-color: var(--oc-dark-blue) !important;
+    background-color: var(--oc-blue) !important;
     padding: 1rem !important;
     transition: background-color 0.3s;
     position: fixed;
