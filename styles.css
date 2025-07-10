@@ -278,32 +278,21 @@
 }
 
 
-#bhs-2025 {
+#about {
     background: repeating-linear-gradient(
         45deg, 
-        var(--bbshop-red) 0%, var(--bbshop-red) 10%, 
+        var(--oc-blue) 0%, var(--oc-blue) 10%, 
         var(--oc-white) 10%, var(--oc-white) 20%, 
-        var(--bbshop-blue) 20%, var(--bbshop-blue) 30%
+        var(--oc-yellow) 20%, var(--oc-yellow) 30%
     );
     color: var(--oc-black);
 }
 
-#bhs-2025 .container {
+#about .container {
     background-color: var(--oc-white);
     border: solid 0.5rem var(--oc-black);
     padding: 2.5rem;
     border-radius: 1rem;
-}
-
-
-#about {
-    background-color: var(--oc-white);
-    color: var(--oc-black);
-}
-
-#about img {
-    width: 50%;
-    height: auto;
 }
 
 
