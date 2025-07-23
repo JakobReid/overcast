@@ -114,6 +114,26 @@
     background-color: var(--bbshop-blue);
 }
 
+.btn-overcast-blue {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
+.btn-overcast-blue:hover {
+    color: var(--oc-white);
+    background-color: color-mix(in srgb, var(--oc-blue) 80%, black);
+}
+
+.btn-overcast-blue:active {
+    color: var(--oc-white);
+    background-color: var(--oc-blue) !important;
+}
+
+.btn-overcast-blue:focus {
+    color: var(--oc-white);
+    background-color: var(--oc-blue);
+}
+
 .btn-overcast-dark-blue {
     color: #ffffff;
     background-color: var(--oc-dark-blue);
@@ -197,8 +217,8 @@
 
 
 .navbar-scrolled {
-    background-color: var(--oc-dark-blue) !important;
-    padding: 1rem !important;
+    background-color: var(--oc-blue) !important;
+    padding: 0.5rem !important;
     transition: background-color 0.3s;
     position: fixed;
     top: 0;
@@ -278,32 +298,21 @@
 }
 
 
-#bhs-2025 {
+#about {
     background: repeating-linear-gradient(
         45deg, 
-        var(--bbshop-red) 0%, var(--bbshop-red) 10%, 
+        var(--oc-blue) 0%, var(--oc-blue) 10%, 
         var(--oc-white) 10%, var(--oc-white) 20%, 
-        var(--bbshop-blue) 20%, var(--bbshop-blue) 30%
+        var(--oc-yellow) 20%, var(--oc-yellow) 30%
     );
     color: var(--oc-black);
 }
 
-#bhs-2025 .container {
+#about .container {
     background-color: var(--oc-white);
     border: solid 0.5rem var(--oc-black);
     padding: 2.5rem;
     border-radius: 1rem;
-}
-
-
-#about {
-    background-color: var(--oc-white);
-    color: var(--oc-black);
-}
-
-#about img {
-    width: 50%;
-    height: auto;
 }
 
 
@@ -324,8 +333,8 @@
 
 
 #watch {
-    background-color: #242424;
-    color: var(--oc-white);
+    background-color: var(--oc-white);
+    color: var(--oc-black);
 }
 
 #watch ::selection {
@@ -353,7 +362,7 @@
 
 #contact {
     color: var(--oc-white);
-    background-color: #2e9bd1;
+    background-color: var(--oc-dark-blue);
 }
 
 #contact a {
